@@ -9,7 +9,7 @@ excel_file = 'wto_dispute_cases.xlsx'
 df = pd.read_excel(excel_file)
 
 # Configure the Gemini API
-genai.configure(api_key='AIzaSyBBfR5o6xF3g1CcvxWKlAyUFX8s-09WiRQ')
+genai.configure(api_key='Your API')
 
 # Initialize the model
 model = genai.GenerativeModel('gemini-pro')
