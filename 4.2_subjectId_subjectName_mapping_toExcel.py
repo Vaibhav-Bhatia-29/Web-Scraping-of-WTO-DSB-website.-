@@ -21,7 +21,7 @@ def parse_subject_mappings(js_file_path):
     return subjects
 
 # Path to your subjects.js file
-js_file_path = '4_subjectId_subjectName_mapping.js'
+js_file_path = '4.1_subjectId_subjectName_mapping.js'
 
 # Parse subject mappings
 subject_mappings = parse_subject_mappings(js_file_path)
@@ -30,6 +30,6 @@ subject_mappings = parse_subject_mappings(js_file_path)
 df = pd.DataFrame(subject_mappings)
 
 # Save the DataFrame to an Excel file
-df.to_excel('4_subject_mappings.xlsx', index=False)
+df.to_excel('4.3_subject_mappings.xlsx', index=False)
 
 print("Subject mappings have been saved to 'subject_mappings.xlsx'")
