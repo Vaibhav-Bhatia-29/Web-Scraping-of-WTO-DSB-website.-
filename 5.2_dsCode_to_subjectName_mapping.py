@@ -29,7 +29,7 @@ def parse_ds_array(js_file_path):
     return ds_data
 
 # Path to your data.js file
-js_file_path = '5_ds_subjectId_mapping.js'
+js_file_path = '5.1_ds_subjectId_mapping.js'
 
 # Parse DS array
 ds_data = parse_ds_array(js_file_path)
@@ -38,7 +38,7 @@ ds_data = parse_ds_array(js_file_path)
 df = pd.DataFrame(ds_data)
 
 # Read the subject mappings Excel file
-subject_df = pd.read_excel('4_subject_mappings.xlsx')
+subject_df = pd.read_excel('4.3_subject_mappings.xlsx')
 
 # Create a dictionary for quick subject name lookup
 subject_dict = dict(zip(subject_df['subject_id'], subject_df['subject_name']))
@@ -82,7 +82,7 @@ final_df['DS Code'] = final_df['DS Code'].apply(ds_code_to_int)
 final_df = final_df.sort_values('DS Code')
 
 # Save the final dataframe to a new Excel file
-final_df.to_excel('5_ds_code_subject_mapping.xlsx', index=False)
+final_df.to_excel('5.3_ds_code_subject_mapping.xlsx', index=False)
 
 print("DS code and subject mapping has been saved to 'ds_code_subject_mapping.xlsx'")
 
